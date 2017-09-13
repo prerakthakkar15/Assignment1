@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A14D6A8D1F6821C300E91C4A /* Feeds+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A14D6A8A1F6821C300E91C4A /* Feeds+CoreDataProperties.m */; };
+		A14D6A8E1F6821C300E91C4A /* Feeds.m in Sources */ = {isa = PBXBuildFile; fileRef = A14D6A8C1F6821C300E91C4A /* Feeds.m */; };
+		A14D6A911F6828B400E91C4A /* ServiceManagerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A14D6A901F6828B400E91C4A /* ServiceManagerClass.m */; };
+		A14D6A991F685C7700E91C4A /* CollectionItemOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A14D6A981F685C7700E91C4A /* CollectionItemOneCell.m */; };
+		A18B36E81F68C8BD00D034D8 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A18B36E71F68C8BD00D034D8 /* images.jpeg */; };
+		A18B37061F68E44900D034D8 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A18B37051F68E44900D034D8 /* ImageIO.framework */; };
+		A18B38271F68EAFA00D034D8 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A18B38261F68EAFA00D034D8 /* SDWebImage.framework */; };
 		A1B6BD981F653490007BA46B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B6BD971F653490007BA46B /* main.m */; };
 		A1B6BD9B1F653490007BA46B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B6BD9A1F653490007BA46B /* AppDelegate.m */; };
 		A1B6BD9E1F653490007BA46B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B6BD9D1F653490007BA46B /* ViewController.m */; };
@@ -14,9 +21,23 @@
 		A1B6BDA41F653490007BA46B /* pterakTestAssignment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A1B6BDA21F653490007BA46B /* pterakTestAssignment.xcdatamodeld */; };
 		A1B6BDA61F653490007BA46B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1B6BDA51F653490007BA46B /* Assets.xcassets */; };
 		A1B6BDA91F653490007BA46B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1B6BDA71F653490007BA46B /* LaunchScreen.storyboard */; };
+		A1B6BDB21F653AB1007BA46B /* CoreDataBaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B6BDB11F653AB1007BA46B /* CoreDataBaseClass.m */; };
+		A1B6BDBB1F655248007BA46B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B6BDBA1F655248007BA46B /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A14D6A821F67CF5F00E91C4A /* Constant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		A14D6A891F6821C300E91C4A /* Feeds+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Feeds+CoreDataProperties.h"; path = "CoreData/Feeds+CoreDataProperties.h"; sourceTree = "<group>"; };
+		A14D6A8A1F6821C300E91C4A /* Feeds+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Feeds+CoreDataProperties.m"; path = "CoreData/Feeds+CoreDataProperties.m"; sourceTree = "<group>"; };
+		A14D6A8B1F6821C300E91C4A /* Feeds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Feeds.h; path = CoreData/Feeds.h; sourceTree = "<group>"; };
+		A14D6A8C1F6821C300E91C4A /* Feeds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Feeds.m; path = CoreData/Feeds.m; sourceTree = "<group>"; };
+		A14D6A8F1F6828B400E91C4A /* ServiceManagerClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceManagerClass.h; path = pterakTestAssignment/ServiceManager/ServiceManagerClass.h; sourceTree = SOURCE_ROOT; };
+		A14D6A901F6828B400E91C4A /* ServiceManagerClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceManagerClass.m; path = pterakTestAssignment/ServiceManager/ServiceManagerClass.m; sourceTree = SOURCE_ROOT; };
+		A14D6A971F685C7700E91C4A /* CollectionItemOneCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CollectionItemOneCell.h; path = CollectionViewCells/CollectionItemOneCell.h; sourceTree = "<group>"; };
+		A14D6A981F685C7700E91C4A /* CollectionItemOneCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CollectionItemOneCell.m; path = CollectionViewCells/CollectionItemOneCell.m; sourceTree = "<group>"; };
+		A18B36E71F68C8BD00D034D8 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
+		A18B37051F68E44900D034D8 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		A18B38261F68EAFA00D034D8 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		A1B6BD931F653490007BA46B /* pterakTestAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pterakTestAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1B6BD971F653490007BA46B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A1B6BD991F653490007BA46B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -28,6 +49,10 @@
 		A1B6BDA51F653490007BA46B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1B6BDA81F653490007BA46B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A1B6BDAA1F653490007BA46B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1B6BDB01F653AB1007BA46B /* CoreDataBaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataBaseClass.h; path = CoreData/CoreDataBaseClass.h; sourceTree = "<group>"; };
+		A1B6BDB11F653AB1007BA46B /* CoreDataBaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataBaseClass.m; path = CoreData/CoreDataBaseClass.m; sourceTree = "<group>"; };
+		A1B6BDB91F655248007BA46B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		A1B6BDBA1F655248007BA46B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,15 +60,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A18B38271F68EAFA00D034D8 /* SDWebImage.framework in Frameworks */,
+				A18B37061F68E44900D034D8 /* ImageIO.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A14D6A921F6840F500E91C4A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A1B6BD9C1F653490007BA46B /* ViewController.h */,
+				A1B6BD9D1F653490007BA46B /* ViewController.m */,
+				A14D6A971F685C7700E91C4A /* CollectionItemOneCell.h */,
+				A14D6A981F685C7700E91C4A /* CollectionItemOneCell.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A14D6A931F68411000E91C4A /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A1B6BD991F653490007BA46B /* AppDelegate.h */,
+				A1B6BD9A1F653490007BA46B /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
 		A1B6BD8A1F65348F007BA46B = {
 			isa = PBXGroup;
 			children = (
+				A18B38261F68EAFA00D034D8 /* SDWebImage.framework */,
 				A1B6BD951F653490007BA46B /* pterakTestAssignment */,
 				A1B6BD941F653490007BA46B /* Products */,
 			);
@@ -60,15 +108,16 @@
 		A1B6BD951F653490007BA46B /* pterakTestAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				A1B6BD991F653490007BA46B /* AppDelegate.h */,
-				A1B6BD9A1F653490007BA46B /* AppDelegate.m */,
-				A1B6BD9C1F653490007BA46B /* ViewController.h */,
-				A1B6BD9D1F653490007BA46B /* ViewController.m */,
+				A18B36E71F68C8BD00D034D8 /* images.jpeg */,
+				A14D6A821F67CF5F00E91C4A /* Constant.h */,
+				A14D6A931F68411000E91C4A /* AppDelegate */,
+				A14D6A921F6840F500E91C4A /* ViewControllers */,
+				A1B6BDB81F655248007BA46B /* Reachability */,
+				A1B6BDB31F653AC8007BA46B /* CoreData */,
 				A1B6BD9F1F653490007BA46B /* Main.storyboard */,
 				A1B6BDA51F653490007BA46B /* Assets.xcassets */,
 				A1B6BDA71F653490007BA46B /* LaunchScreen.storyboard */,
 				A1B6BDAA1F653490007BA46B /* Info.plist */,
-				A1B6BDA21F653490007BA46B /* pterakTestAssignment.xcdatamodeld */,
 				A1B6BD961F653490007BA46B /* Supporting Files */,
 			);
 			path = pterakTestAssignment;
@@ -77,9 +126,36 @@
 		A1B6BD961F653490007BA46B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A18B37051F68E44900D034D8 /* ImageIO.framework */,
 				A1B6BD971F653490007BA46B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1B6BDB31F653AC8007BA46B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				A1B6BDA21F653490007BA46B /* pterakTestAssignment.xcdatamodeld */,
+				A1B6BDB01F653AB1007BA46B /* CoreDataBaseClass.h */,
+				A1B6BDB11F653AB1007BA46B /* CoreDataBaseClass.m */,
+				A14D6A891F6821C300E91C4A /* Feeds+CoreDataProperties.h */,
+				A14D6A8A1F6821C300E91C4A /* Feeds+CoreDataProperties.m */,
+				A14D6A8B1F6821C300E91C4A /* Feeds.h */,
+				A14D6A8C1F6821C300E91C4A /* Feeds.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		A1B6BDB81F655248007BA46B /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				A1B6BDB91F655248007BA46B /* Reachability.h */,
+				A1B6BDBA1F655248007BA46B /* Reachability.m */,
+				A14D6A8F1F6828B400E91C4A /* ServiceManagerClass.h */,
+				A14D6A901F6828B400E91C4A /* ServiceManagerClass.m */,
+			);
+			name = Reachability;
+			path = ServiceManager/Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1B6BDA91F653490007BA46B /* LaunchScreen.storyboard in Resources */,
+				A18B36E81F68C8BD00D034D8 /* images.jpeg in Resources */,
 				A1B6BDA61F653490007BA46B /* Assets.xcassets in Resources */,
 				A1B6BDA11F653490007BA46B /* Main.storyboard in Resources */,
 			);
@@ -153,9 +230,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1B6BDB21F653AB1007BA46B /* CoreDataBaseClass.m in Sources */,
+				A14D6A8E1F6821C300E91C4A /* Feeds.m in Sources */,
 				A1B6BD9E1F653490007BA46B /* ViewController.m in Sources */,
+				A1B6BDBB1F655248007BA46B /* Reachability.m in Sources */,
+				A14D6A8D1F6821C300E91C4A /* Feeds+CoreDataProperties.m in Sources */,
 				A1B6BD9B1F653490007BA46B /* AppDelegate.m in Sources */,
 				A1B6BD981F653490007BA46B /* main.m in Sources */,
+				A14D6A991F685C7700E91C4A /* CollectionItemOneCell.m in Sources */,
+				A14D6A911F6828B400E91C4A /* ServiceManagerClass.m in Sources */,
 				A1B6BDA41F653490007BA46B /* pterakTestAssignment.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,8 +349,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/pterakTestAssignment/SDWebImageView",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/SDWebImage";
 				INFOPLIST_FILE = pterakTestAssignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prerak.testAssignment.pterakTestAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -277,8 +367,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/pterakTestAssignment/SDWebImageView",
+					"$(PROJECT_DIR)",
+				);
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/SDWebImage";
 				INFOPLIST_FILE = pterakTestAssignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prerak.testAssignment.pterakTestAssignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -303,6 +400,7 @@
 				A1B6BDAF1F653490007BA46B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
