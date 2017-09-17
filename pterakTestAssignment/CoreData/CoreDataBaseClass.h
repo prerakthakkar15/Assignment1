@@ -20,4 +20,5 @@
 +(CoreDataBaseClass*)sharedManager;
 -(void)insertStationRecordInLocalDatabase:(NSArray *)arrFeedResults;
 -(NSArray*)getStoredData;
+- (void)deleteAllFeedsData;
 @end

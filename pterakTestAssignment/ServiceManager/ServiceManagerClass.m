@@ -17,11 +17,14 @@
 -(void)fetchDataFromRSSFeed{
     if([self checkConnection]){
         NSURLSession *session = [NSURLSession sharedSession];
-        NSURLSessionDataTask *dataTask = [session dataTaskWithURL:[NSURL URLWithString:KCONST_STRURL] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSURL *url = [NSURL URLWithString:KCONST_STRURL];
+        NSLog(@"URL = %@",url);
+        NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
             NSDictionary *responseJson = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
             NSLog(@"Response %@", responseJson);
-            NSMutableArray *responseArray = [[NSMutableArray alloc]initWithArray:[responseJson valueForKeyPath:@"feed.results"]];
+            NSMutableArray *responseArray = [[NSMutableArray alloc]initWithArray:[responseJson        valueForKeyPath:@"feed.results"]];
             if(responseArray.count){
+             [[CoreDataBaseClass sharedManager] deleteAllFeedsData];
             [[CoreDataBaseClass sharedManager] insertStationRecordInLocalDatabase:responseArray];
             if(self.DataReceivFromServerCallBack){
                self.DataReceivFromServerCallBack(YES);
@@ -30,6 +33,8 @@
         }];
         [dataTask resume];
     }
+    
+   
 }
 
 -(BOOL)checkConnection

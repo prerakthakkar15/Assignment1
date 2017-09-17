@@ -89,7 +89,7 @@
     if (!coordinator) {
         return nil;
     }
-    _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
     [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     return _managedObjectContext;
 }
@@ -115,7 +115,7 @@
 -(void)insertStationRecordInLocalDatabase:(NSArray *)arrFeedResults{
     for (NSDictionary *feedDisc in arrFeedResults)
     {
-        Feeds  *objFeeds = [NSEntityDescription insertNewObjectForEntityForName:@"Feeds" inManagedObjectContext:_managedObjectContext];
+        Feeds  *objFeeds = [NSEntityDescription insertNewObjectForEntityForName:@"Feeds" inManagedObjectContext:self.managedObjectContext];
        
         if ([feedDisc valueForKey:KCONST_ARTISTNAME]) {
             objFeeds.artistName = [feedDisc valueForKey:KCONST_ARTISTNAME];
@@ -126,9 +126,7 @@
         if ([feedDisc valueForKey:KCONST_NAME]) {
             objFeeds.name = [feedDisc valueForKey:KCONST_NAME];
         }
-
-       
-    }
+      }
     NSError *error = nil;
     // Save the object to persistent store
     if (![_managedObjectContext save:&error]) {
@@ -153,5 +151,22 @@
     return results;
 }
 
+- (void)deleteAllFeedsData
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Feeds"];
+    [fetchRequest setIncludesPropertyValues:NO];
+    
+    NSError *error;
+    NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    for (NSManagedObject *object in fetchedObjects)
+    {
+        [context deleteObject:object];
+    }
+    
+    error = nil;
+    [context save:&error];
+}
 
 @end

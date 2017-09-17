@@ -12,12 +12,16 @@
 #import "ServiceManagerClass.h"
 #import "CollectionItemOneCell.h"
 #import "Constant.h"
+#import "SVProgressHUD.h"
 
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 {
     NSMutableArray *localStoredDataArray;
 }
 @property(nonatomic,weak)IBOutlet UICollectionView *collectionView;
+
+
+@property(nonatomic,weak)IBOutlet UIImageView *imgView;
 @end
 
 static NSString * const reuseIdentifier = @"Cell";
@@ -46,7 +50,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-  
 }
 
 #pragma mark -
@@ -56,7 +59,7 @@ static NSString * const reuseIdentifier = @"Cell";
     self.title = @"Rss iTunes Feed";
     ServiceManagerClass *objServiceManager = [[ServiceManagerClass alloc]init];
     [objServiceManager fetchDataFromRSSFeed];
-    
+    [SVProgressHUD show];
     //CallBack to check whether data is Available/received from server or not
     objServiceManager.DataReceivFromServerCallBack=^(BOOL isDataReceived){
         if(isDataReceived){
@@ -66,6 +69,7 @@ static NSString * const reuseIdentifier = @"Cell";
         else{
             //No Data Available
             [self showNoDataAvailableAlert];
+            [SVProgressHUD show];
         }
     };
 }
@@ -75,7 +79,7 @@ static NSString * const reuseIdentifier = @"Cell";
     NSLog(@"LocakData = %@",localStoredDataArray);
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.collectionView reloadData];
-        
+        [SVProgressHUD dismiss];
     });
    
 }
@@ -87,6 +91,13 @@ static NSString * const reuseIdentifier = @"Cell";
         [self presentViewController:alertController animated:YES completion:nil];
         
     });
+}
+
+#pragma mark -
+#pragma mark Button Action
+
+-(IBAction)refresh:(id)sender{
+    [self Initialise];
 }
 
 #pragma mark -

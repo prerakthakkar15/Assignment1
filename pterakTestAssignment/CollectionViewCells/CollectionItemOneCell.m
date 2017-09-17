@@ -8,7 +8,9 @@
 
 #import "CollectionItemOneCell.h"
 #import "Constant.h"
-//#import "UIImageView+WebCache.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "UIView+WebCache.h"
+
 @implementation CollectionItemOneCell
 -(void)awakeFromNib {
     [super awakeFromNib];
@@ -20,10 +22,10 @@
     [self.lblArtistName setText:[dict valueForKey:KCONST_ARTISTNAME]];
     NSString *strImageURl = [dict valueForKey:KCONST_ARTWORKURL100];
     NSURL *url = [NSURL URLWithString:strImageURl];
+    [self.imgView sd_setShowActivityIndicatorView:YES];
+    [self.imgView sd_setIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    [self.imgView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"images.jpeg"]];
     
-   // [self.imgView sd_setImageWithURL:url placeholderImage:[UIImage imageNamed:@"images.png"]];
-    //  [self.imgView sd_setShowActivityIndicatorView:YES];
-  //  [self.imgView sd_setIndicatorStyle:UIActivityIndicatorViewStyleGray];
 }
 
 @end
